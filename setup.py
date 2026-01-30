@@ -30,11 +30,12 @@ import setuptools.command.build_py
 import setuptools.command.develop
 from setuptools import find_packages, setup
 
+
 if LooseVersion(sys.version) < LooseVersion("3.6") or LooseVersion(
     sys.version
-) > LooseVersion("3.12"):
+) > LooseVersion("3.14"):
     raise RuntimeError(
-        "Trainer requires python >= 3.6 and <=3.12 "
+        "Trainer requires python >= 3.6 and <=3.14 "
         "but your Python version is {}".format(sys.version)
     )
 
@@ -105,7 +106,7 @@ setup(
         "test": requirements_test,
         "all": requirements_all
     },
-    python_requires=">=3.6.0, <3.12",
+    python_requires=">=3.6.0",
     classifiers=[
         "Environment :: Console",
         "Natural Language :: English",
@@ -119,10 +120,10 @@ setup(
         "Operating System :: OS Independent",
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
     ],
     zip_safe=False,
 )
