@@ -33,9 +33,9 @@ from setuptools import find_packages, setup
 
 if LooseVersion(sys.version) < LooseVersion("3.6") or LooseVersion(
     sys.version
-) > LooseVersion("3.14"):
+) > LooseVersion("3.15"):
     raise RuntimeError(
-        "Trainer requires python >= 3.6 and <=3.14 "
+        "Trainer requires python >= 3.6 and <=3.15 "
         "but your Python version is {}".format(sys.version)
     )
 
@@ -123,7 +123,7 @@ setup(
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
-        "Programming Language :: Python :: 3.14",
+        "Programming Language :: Python :: 3.15",
     ],
     zip_safe=False,
 )
